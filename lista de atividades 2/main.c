@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main(void){
+    /*Faça um programa em C para ler os elementos de uma matriz 3 x 3 de números inteiros.
+Depois exiba os elementos da mesma na tela. Por fim mostre a soma dos números ímpares
+fornecidos.*/
+int matriz [3][3];
+    int n1, soma = 0 ;
+    for (int i = 0; i < 3; i++) {
+        for (int j=0; j < 3; j++) {
+            printf ("Digite o valor desejado\n");
+            scanf ("%d", &n1);
+            matriz [i][j] = n1;
+            if (n1 % 2 == 1){
+                soma+=n1;
+            }
+        }
+    }
+    printf("\nMatriz\n");
+    for (int i = 0; i<3; i++) {
+        for (int j=0; j<3; j++) {
+            printf("[%d]", matriz [i][j]);
+            printf("\n");
+        }
+    }
+    printf("Soma dos numeros impares é de: %d", soma);
+}
